@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function myopen(pan){
+		var win = window.open("/gibodetail?pan="+pan,"오목","width=450,height=450");
+	}
+	function myopen2(pan){
+		var win = window.open("/gibodetail2?pan="+pan,"오목","width=450,height=450");
+	}
+
+</script>
+</head>
+<body>
+{%for n in my_list%}
+<a href="javascript:myopen('{{n}}')">{{n}}판 보기</a>
+<a href="javascript:myopen2('{{n}}')">{{n}}판 보기2</a><br>
+{%endfor%}
+</body>
+</html>
